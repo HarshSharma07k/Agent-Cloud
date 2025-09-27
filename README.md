@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agent Cloud
 
-## Getting Started
+An AI-powered video calling application that allows users to create and interact with custom AI agents in real-time video calls. This project provides features like automated summaries, searchable transcripts, and a full subscription model.
 
-First, run the development server:
+This project was created as a learning exercise to explore modern web development technologies and the integration of powerful AI and video SDKs, based on a tutorial from Antonio on YouTube.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📖 About The Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Agent Cloud is a feature-rich, AI-driven video conferencing platform designed to showcase the power of modern web technologies. The core concept is to move beyond simple video calls and create an interactive environment where users can engage with specialized AI agents in real-time.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Imagine having a dedicated language tutor, a hyper-focused interview coach, or a creative brainstorming partner available on-demand within your calls. This project makes that possible by integrating a powerful video SDK with the OpenAI API, allowing for the creation and management of custom AI personas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This application was built as a comprehensive learning project to demonstrate a full-stack, type-safe architecture using Next.js 15, tRPC, Drizzle ORM, and a suite of other cutting-edge tools. It serves as a practical, real-world example of how to build, deploy, and manage a modern AI-powered SaaS application from the ground up.
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+* **Custom AI Agents**: Create, manage, and customize AI agents with specific roles and instructions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Real-time Video Calls**: Schedule, manage, and join video calls directly in the app.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Live AI Interaction**: AI agents can join calls and interact with users in real-time.
 
-## Deploy on Vercel
+* **Post-Meeting Intelligence**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  * **AI-Powered Summaries**: Automatically generate clean, topic-based summaries with timestamps.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  * **Searchable Transcripts**: Full transcripts with keyword highlighting.
+
+  * **Call Recordings**: Replay full video call recordings.
+
+  * **Meeting Chatbot**: An intelligent chatbot that can answer questions about the meeting's content.
+
+* **SaaS Subscription Model**: Integrated checkout process and subscription management.
+
+* **Secure Authentication**: Full email and social (Google, GitHub) login system.
+
+* **Fully Responsive**: A seamless experience on both desktop and mobile devices.
+
+* **Personalized Dashboard**: Manage your agents and meetings from a central dashboard.
+
+* **Background Job Processing**: Asynchronous tasks like transcript generation and summarization are handled in the background.
+
+## 💻 Tech Stack
+
+This project is built with a modern, type-safe, and scalable technology stack:
+
+* **Framework**: [Next.js](https://nextjs.org/) 15 & [React](https://react.dev/) 19
+
+* **Type Safety**: [tRPC](https://trpc.io/) with [TanStack Query](https://tanstack.com/query/latest)
+
+* **Database**: [PostgreSQL](https://www.postgresql.org/) on [Neon](https://neon.tech/)
+
+* **ORM**: [Drizzle ORM](https://orm.drizzle.team/)
+
+* **Styling**: [Tailwind CSS](https://tailwindcss.com/) v4 & [Shadcn UI](https://ui.shadcn.com/)
+
+* **Authentication**: [Better Stack](https://betterstack.com/)
+
+* **Payments**: [Polar](https://polar.sh/)
+
+* **Video & Chat**: [Stream Video & Chat SDK](https://getstream.io/)
+
+* **AI**: [OpenAI API](https://openai.com/)
+
+* **Background Jobs**: [Ingest](https://www.inngest.com/)
+
+* **Deployment**: [Vercel](https://vercel.com/)
+
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+* Node.js (v18 or later)
+
+* npm or yarn
+
+* A PostgreSQL database (e.g., from Neon)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```
+   git clone https://github.com/HarshSharma07k/Agent-Cloud.git
+   ```
+
+2. **Install dependencies:**
+
+   ```
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env.local` file in the root of the project and add the necessary API keys and credentials for the services used:
+
+   ```
+   # Database
+   DATABASE_URL="..."
+   
+   # Authentication (Better Stack)
+   ...
+   
+   # Video & Chat (Stream)
+   ...
+   
+   # AI (OpenAI)
+   OPENAI_API_KEY="..."
+   
+   # Other services...
+   ```
+
+4. **Run the database migrations:**
+
+   ```
+   npm run db:push
+   ```
+
+5. **Run the development server:**
+
+   ```
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) with your browser to see the result.
+
+## 🙏 Acknowledgments
+
+This project is based entirely on the incredible full-stack tutorial by Antonio. All credit for the architecture, design, and implementation guidance goes to him.
+
+* **Tutorial**: [Build and Deploy a Full-Stack AI SaaS with Next.js 15, React 19, tRPC, Drizzle & more](https://www.google.com/search?q=https://youtu.be/xEDCEmqyvC8)
+
+* **Creator**: Antonio from AI Explorers
